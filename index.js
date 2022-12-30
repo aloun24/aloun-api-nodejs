@@ -72,7 +72,11 @@ app.get("/read", async(req,res) => {
     }
 })
 
-// app.listen(3000, () => console.log('Server is running on port 3000'));
-const server = app.listen(0, function(){
-    console.log(`Server is listening on http://localhost:${server.address().port}`);
+app.get("/hi", async(req,res) => {
+   res.send('hi')
 })
+
+ app.listen(3000, () => console.log('Server is running on port 3000'));
+//const server = app.listen(0, function(){
+//    console.log(`Server is listening on http://localhost:${server.address().port}`);
+//})
